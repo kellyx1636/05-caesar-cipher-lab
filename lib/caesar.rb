@@ -23,7 +23,7 @@ end
 
 def caesar_decode(string, offset)
   # code 
-  puts caesar_encode(string, offset*-1) #offset is multiplied with -1 because once offset is negative num, adding to index --> substracting from index (making it go backwards) 
+  puts caesar_encode(string, offset*-1) #once offset is negative num, from adding to index --> substracting from index (making it go backwards instead) 
 end
 
 puts "What would you like to encode?"
