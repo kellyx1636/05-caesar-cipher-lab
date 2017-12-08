@@ -2,7 +2,7 @@ def caesar_encode(string, offset)
   # code
   little_alphabet = [*('a'..'z')] 
   big_alphabet = [*('A'..'Z')]
-  numbers = [*('0'..'9')] 
+#   numbers = [*('0'..'9')] 
   
   string.split(//).map do |letter|   #splits every letter 
     if letter == letter.downcase 
@@ -26,7 +26,7 @@ def caesar_decode(string, offset)
 #   puts caesar_encode(string, offset*-1) #once offset is negative num, from adding to index --> substracting from index (making it go backwards instead) 
   little_alphabet = [*('a'..'z')] 
   big_alphabet = [*('A'..'Z')]
-  numbers = [*('0'..'9')] 
+#   numbers = [*('0'..'9')] 
   
   string.split(//).map do |letter|   #splits every letter 
     if letter == letter.downcase 
