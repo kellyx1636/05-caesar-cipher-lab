@@ -23,7 +23,22 @@ end
 
 def caesar_decode(string, offset)
   # code 
-  puts caesar_encode(string, offset*-1) #once offset is negative num, from adding to index --> substracting from index (making it go backwards instead) 
+#   puts caesar_encode(string, offset*-1) #once offset is negative num, from adding to index --> substracting from index (making it go backwards instead) 
+  little_alphabet = [*('a'..'z')] 
+  big_alphabet = [*('A'..'Z')]
+  numbers = [*('0'..'9')] 
+  
+  string.split(//).map do |letter|   #splits every letter 
+    if letter == letter.downcase 
+      little_alphabet[(little_alphabet.index(letter) - offset)%26]  #lowercase + wrapping back
+    elsif letter == letter.upcase 
+      big_alphabet[(big_alphabet.index(letter) - offset)%26]  #uppercase 
+    # elsif letter == numbers 
+    #   numbers[(numbers.index(letter) + offset)%10]
+    else 
+      put letter
+    end
+  end.join("")
 end
 
 puts "What would you like to encode?"
